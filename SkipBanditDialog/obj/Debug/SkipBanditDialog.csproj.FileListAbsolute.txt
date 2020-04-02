@@ -5,3 +5,4 @@ C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBand
 C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.dll
 C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.pdb
 C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.csproj.CopyComplete
+C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.csprojAssemblyReference.cache

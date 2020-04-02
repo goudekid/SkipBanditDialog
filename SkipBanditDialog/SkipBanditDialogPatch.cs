@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using System;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 
@@ -10,12 +11,23 @@ namespace SkipBanditDialog
         [HarmonyPrefix]
         static bool SetupDialogPostfix(ConversationManager __instance, MobileParty party, IAgent agent, IAgent mainAgent)
         {
-            if (party.IsBandit && !party.IsLordParty && !party.IsBanditBossParty && !party.IsCurrentlyUsedByAQuest)
+            try
             {
-                return false;
-            }
+                FileLog.Reset();
 
-            return true;
+                if (party != null && party.IsBandit && !party.IsLordParty && !party.IsBanditBossParty && !party.IsCurrentlyUsedByAQuest 
+                    && agent != null && agent.Character != null && !agent.Character.IsHero && !agent.Character.StringId.Contains("tutorial"))
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            catch(Exception ex)
+            {
+                FileLogExtension.Log("EXCEPTION OCCURED: " + ex.Message);
+                return true;
+            }
         }
     }
 }

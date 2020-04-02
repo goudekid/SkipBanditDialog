@@ -66,6 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileLogExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkipBanditDialog.cs" />
     <Compile Include="SkipBanditDialogPatch.cs" />
