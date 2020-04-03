@@ -1,7 +1,7 @@
 ﻿<Module>
   <Name value="Skip Bandit Dialog"/>
   <Id value="SkipBanditDialog"/>
-  <Version value="v0.0.4"/>
+  <Version value="v0.1.0"/>
   <SingleplayerModule value="true"/>
   <MultiplayerModule value="false"/>
   <DependedModules/>
@@ -9,7 +9,7 @@
     <SubModule>
       <Name value="SkipBanditDialog"/>
       <DLLName value="SkipBanditDialog.dll"/>
-      <SubModuleClassType value="SkipBanditDialog.SkipBanditDialog"/>
+      <SubModuleClassType value="SkipBanditDialog.StartHarmonySubModule"/>
       <Tags>
         <Tag key="DedicatedServerType" value="none" />
         <Tag key="IsNoRenderModeElement" value="false" />

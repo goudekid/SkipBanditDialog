@@ -1,24 +1,41 @@
 ﻿using HarmonyLib;
 using System;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.Core;
 
 namespace SkipBanditDialog
 {
-    [HarmonyPatch(typeof(ConversationManager), "SetupAndStartMapConversation")]
+    [HarmonyPatch(typeof(PlayerEncounter), "DoMeetingInternal")]
     public class SkipBanditDialogPatch
     {
         [HarmonyPrefix]
-        static bool SetupDialogPostfix(ConversationManager __instance, MobileParty party, IAgent agent, IAgent mainAgent)
+        static bool DoMeetingPrefix(PlayerEncounter __instance, PartyBase ____encounteredParty, 
+            ref bool ____stateHandled, PartyBase ____defenderParty, ref bool ____meetingDone)
         {
             try
             {
-                FileLog.Reset();
-
-                if (party != null && party.IsBandit && !party.IsLordParty && !party.IsBanditBossParty && !party.IsCurrentlyUsedByAQuest 
-                    && agent != null && agent.Character != null && !agent.Character.IsHero && !agent.Character.StringId.Contains("tutorial"))
+                if (BanditToggle.SkipDialog && ____encounteredParty != null && ____encounteredParty.IsMobile)
                 {
-                    return false;
+                    var party = ____encounteredParty.MobileParty;
+
+                    if (party != null && party.IsBandit && !party.IsLordParty && !party.IsBanditBossParty && !party.IsCurrentlyUsedByAQuest)
+                    {
+
+                        Campaign.Current.CurrentConversationContext = ConversationContext.PartyEncounter;
+                        Traverse.Create(__instance).Property<PlayerEncounterState>("EncounterState").Value = PlayerEncounterState.Begin;
+                        ____stateHandled = true;
+                        var _defenderParty = ____defenderParty;
+                        if (PlayerEncounter.PlayerIsAttacker && _defenderParty.IsMobile && _defenderParty.MobileParty.Army != null && _defenderParty.MobileParty.Army.LeaderParty == _defenderParty.MobileParty && _defenderParty.MobileParty.Army.LeaderParty.MapFaction == MobileParty.MainParty.MapFaction && !_defenderParty.MobileParty.Army.LeaderParty.AttachedParties.Contains(MobileParty.MainParty))
+                        {
+                            GameMenu.SwitchToMenu("army_encounter");
+                            return false;
+                        }
+                        ____meetingDone = true;
+                        GameMenu.SwitchToMenu("army_encounter");
+
+                        return false;
+                    }
                 }
 
                 return true;
