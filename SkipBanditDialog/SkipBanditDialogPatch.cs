@@ -29,5 +29,6 @@ namespace SkipBanditDialog
                 return true;
             }
         }
+
     }
 }

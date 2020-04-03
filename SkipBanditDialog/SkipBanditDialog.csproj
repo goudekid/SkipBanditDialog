@@ -77,6 +77,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\SubModule.xml" "C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SkipBanditDialog\SubModule.xml"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\SubModule.xml" "C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SkipBanditDialog\SubModule.xml"
+del "C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SkipBanditDialog\bin\Win64_Shipping_Client\0Harmony.xml"
+del "C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SkipBanditDialog\bin\Win64_Shipping_Client\SkipBanditDialog.pdb"</PostBuildEvent>
   </PropertyGroup>
 </Project>
