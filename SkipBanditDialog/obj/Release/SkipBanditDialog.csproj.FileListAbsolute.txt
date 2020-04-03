@@ -1,6 +1,0 @@
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\bin\Release\bin\SubModule.xml
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\bin\Release\bin\SkipBanditDialog.dll
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\bin\Release\bin\SkipBanditDialog.pdb
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Release\SkipBanditDialog.csproj.CoreCompileInputs.cache
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Release\SkipBanditDialog.dll
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Release\SkipBanditDialog.pdb

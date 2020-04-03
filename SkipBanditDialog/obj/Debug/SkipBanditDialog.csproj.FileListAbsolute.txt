@@ -1,7 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\SkipBanditDialog\bin\Win64_Shipping_Client\SkipBanditDialog.dll
-C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\SkipBanditDialog\bin\Win64_Shipping_Client\SkipBanditDialog.pdb
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.csproj.CoreCompileInputs.cache
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.dll
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.pdb
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.csproj.CopyComplete
-C:\Users\garre\source\repos\SkipBanditDialog\SkipBanditDialog\obj\Debug\SkipBanditDialog.csprojAssemblyReference.cache
