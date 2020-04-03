@@ -99,8 +99,7 @@
     <None Include="SubModule.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GUI\Brushes\MapBar.xml" />
-    <Content Include="GUI\Prefab\Map\MapBar.xml" />
+    <Content Include="GUI\Prefabs\Map\MapBar.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -364,7 +364,7 @@
                     </ListPanel>
                   </Children>
                 </HintWidget>
-                
+
                 <HintWidget DataSource="{AvailableTroopsHint}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="5" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint">
                   <Children>
                     <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsEnabled="false">
