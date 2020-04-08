@@ -4,7 +4,14 @@
   <Version value="v0.2.0"/>
   <SingleplayerModule value="true"/>
   <MultiplayerModule value="false"/>
-  <DependedModules/>
+  <Official value="false"/>
+  <DependedModules>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="CustomBattle"/>
+    <DependedModule Id="StoryMode" />
+  </DependedModules>
   <SubModules>
     <SubModule>
       <Name value="SkipBanditDialog"/>
